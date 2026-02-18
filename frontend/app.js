@@ -1,4 +1,4 @@
-const API = "http://127.0.0.1:5000/api";
+const API = "https://urban-mobility-data-explorer-hqlv.onrender.com/api";
 
 const state = {
   sort: "pickup_datetime",
