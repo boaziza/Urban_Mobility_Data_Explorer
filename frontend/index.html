@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Urban Mobility Explorer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <main>
+    <h1>Urban Mobility Data Explorer</h1>
+
+    <section class="card">
+      <h2>Filters</h2>
+      <div class="filters-grid">
+        <label>Start Date <input id="startDate" type="date" /></label>
+        <label>End Date <input id="endDate" type="date" /></label>
+        <label>Borough
+          <select id="borough">
+            <option value="">All</option>
+          </select>
+        </label>
+        <label>Payment Type
+          <select id="paymentType">
+            <option value="">All</option>
+          </select>
+        </label>
+        <label>Min Distance (mi) <input id="minDistance" type="number" step="0.1" /></label>
+        <label>Max Distance (mi) <input id="maxDistance" type="number" step="0.1" /></label>
+        <label>Min Fare ($) <input id="minFare" type="number" step="0.1" /></label>
+        <label>Max Fare ($) <input id="maxFare" type="number" step="0.1" /></label>
+      </div>
+      <div class="actions">
+        <button id="applyFilters">Apply Filters</button>
+        <button id="resetFilters" class="secondary">Reset</button>
+      </div>
+    </section>
+
+    <section id="kpis" class="grid"></section>
+    <section class="grid">
+      <canvas id="hourlyChart"></canvas>
+      <canvas id="zonesChart"></canvas>
+    </section>
+    <section>
+      <h2>Top Routes (Manual Algorithm)</h2>
+      <table id="routesTable">
+        <thead><tr><th>PU</th><th>DO</th><th>Trips</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+    <section>
+      <h2>Insights</h2>
+      <p class="insights-subtitle">
+        Plain-language findings generated from trip columns like
+        <code>pickup_hour</code>, <code>payment_type</code>, <code>tip_pct</code>,
+        and pickup/dropoff location IDs.
+      </p>
+      <div id="insights" class="grid"></div>
+    </section>
+
+    <section>
+      <h2>Trip Detail View</h2>
+      <p class="insights-subtitle">Sortable detail view using <code>pickup_datetime</code>, <code>trip_distance</code>, <code>fare_amount</code>, and <code>total_amount</code>.</p>
+      <table id="tripsTable">
+        <thead>
+          <tr>
+            <th data-sort="pickup_datetime">Pickup Time</th>
+            <th data-sort="distance">Distance</th>
+            <th data-sort="fare">Fare</th>
+            <th data-sort="total">Total</th>
+            <th data-sort="duration">Duration (min)</th>
+            <th>PU Zone</th>
+            <th>DO Zone</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
