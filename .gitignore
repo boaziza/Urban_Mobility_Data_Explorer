@@ -1,0 +1,5 @@
+.venv/
+.vscode/
+__pycache__/
+data/yellow_tripdata_*.csv
+data/yellow_tripdata_*.parquet
