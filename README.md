@@ -6,7 +6,7 @@ Enterprise Web Development Summative Project using NYC TLC Yellow Taxi data to e
 - **Team Name:** EWDGroup10
 - **Members:**
   - IZA Prince Boaz
-  - Kwizera Bodgar
+  - Bodgar Kwizera
   - Ineza Merveille Shekina
   - Ishimwe Sam Nelson
   - Obanijesu Williams Okunola
