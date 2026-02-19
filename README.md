@@ -12,12 +12,16 @@ Enterprise Web Development Summative Project using NYC TLC Yellow Taxi data to e
   - Obanijesu Williams Okunola
 
 ## Project Links
+
 - **Website URL:** https://boaziza.github.io/Urban_Mobility_Data_Explorer/
+
 - **GitHub Repository:** https://github.com/boaziza/Urban_Mobility_Data_Explorer.git
+
 - **Deployed Backend API:** https://urban-mobility-data-explorer-hqlv.onrender.com
+
 - **Team Task Sheet:** https://docs.google.com/spreadsheets/d/1Spu3KrzAqDeETqtlrAyjqn9MeJZbof1f0aOhHezKqu0/edit?usp=sharing
-- **Video Walkthrough (5 min):** `ADD_YOUTUBE_LINK_HERE`
-- **PDF Technical Report:** `ADD_REPORT_LINK_OR_FILENAME_HERE`
+
+- **Video Walkthrough (5 min):** https://youtu.be/gORKNZVHq3U
 
 ## Overview
 This system ingests raw NYC taxi trip records, cleans and normalizes them, stores them in a relational SQLite database, and exposes a Flask API consumed by a JavaScript dashboard for interactive urban mobility analysis.
